@@ -266,7 +266,6 @@
         lastInventoryItems = new Map(currentInventoryItems);
         lastBagItems = new Map(currentBagItems);
     }
-
     // 9. Функция определения действия игрока (обычные действия)
     function parsePlayerAction() {
         // Проверка обычных действий (исключая поедание)
@@ -277,7 +276,7 @@
                 const actionText = timerText.split('осталось')[0].trim();
 
                 if (actionText.includes('Идти')) {
-                    const location = document.querySelector('p#loc-name.svelte-1yiowxi')?.textContent?.trim() || 'неизвестное место';
+                    const location = document.querySelector('p#loc-name.svelte-1rta3dd')?.textContent?.trim() || 'неизвестное место';
                     return `Пошёл в ${location}`;
                 } else if (actionText.includes('Обыскивать труп')) {
                     return 'Обыскал труп';
@@ -290,10 +289,10 @@
                 } else if (actionText.includes('Пить')) {
                     return 'Попил';
                 } else if (actionText.includes('Нырять')) {
-                    const location = document.querySelector('p#loc-name.svelte-1yiowxi')?.textContent?.trim() || 'неизвестное место';
+                    const location = document.querySelector('p#loc-name.svelte-1rta3dd')?.textContent?.trim() || 'неизвестное место';
                     return `Нырнул в ${location}`;
                 } else if (actionText.includes('Всплывать')) {
-                    const location = document.querySelector('p#loc-name.svelte-1yiowxi')?.textContent?.trim() || 'неизвестное место';
+                    const location = document.querySelector('p#loc-name.svelte-1rta3dd')?.textContent?.trim() || 'неизвестное место';
                     return `Всплыл в ${location}`;
                 }
             }
@@ -301,6 +300,7 @@
 
         return null;
     }
+
 
     // 10. Функция проверки боя
     function checkCombatStatus() {
