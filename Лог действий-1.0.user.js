@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Лог действий
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1
 // @author       Невезение
 // @match        *://patron.kinwoods.com/*
 // @grant        GM_getValue
