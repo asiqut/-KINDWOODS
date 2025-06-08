@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Лог действий
 // @namespace    http://tampermonkey.net/
-// @version      1
+// @version      1.0
 // @author       Невезение
 // @match        *://patron.kinwoods.com/*
 // @grant        GM_getValue
@@ -278,8 +278,8 @@
                 if (actionText.includes('Идти')) {
                     const location = document.querySelector('p#loc-name.svelte-1rta3dd')?.textContent?.trim() || 'неизвестное место';
                     return `Пошёл в ${location}`;
-                } else if (actionText.includes('Обыскивать труп')) {
-                    return 'Обыскал труп';
+                } else if (actionText.includes('Собирать добычу')) {
+                    return 'Собрал добычу';
                 } else if (actionText.includes('Искать следы')) {
                     return 'Искал следы';
                 } else if (actionText.includes('Изучать след')) {
